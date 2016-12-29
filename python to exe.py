@@ -1,12 +1,12 @@
 #imports
 import os
-import subprocess
 
 from time import sleep
 
 
 #pythonfile = input("what file do you want to make into an exe? ")
 pythonfile = "anime-tracker.py"
+#installdir = input("where is your PyInstaller directory? ")
 installdir = "D:\downloads\PyInstalle\PyInstaller-3.2"
 workdir = os.path.join(installdir, pythonfile[:-3])
 exefile = os.path.join(workdir, "dist", pythonfile[:-3], pythonfile[:-3]+".exe" )
@@ -46,23 +46,12 @@ if check == True:
 ls = os.popen("dir")
 (ls.read())
 
-'''test = os.popen("dir")
-print(test.read())'''
-errormsg = "something went wrong, please contact your administrator."
-'''try:
-    os.chdir("python-file")
-except:
-    os.mkdir(installdir + "\\" + "python-file")
-    print("couldn't create directory.")
-    print(errormsg)
-    pass'''
 
 print("initiating phase 2")
 filedir = os.path.join(installdir, pythonfile)
 print(workdir)
 sleep(1)
-print("heyy")
-os.system("dir")
+
 
 
 
@@ -74,18 +63,20 @@ try:
     print("working..")
 
 except:
-    print(errormsg)
     print("please remove the following directory manually:")
     print(" [dist] ")
-    subprocess.Popen(r'explorer /select, "D:\downloads\PyInstalle\PyInstaller-3.2\anime-tracker\"')
-    #print(step2.read())
+    print("opening directory in question..")
+    sleep(2)
+    os.system("explorer.exe /select," + installdir)
+
+
 
 
 sleep(2)
 print("done!")
 print("opening output file..")
 sleep(1)
-#os.system("explorer.exe /select," + exefile)
+os.system("explorer.exe /select," + exefile)
 
 #---writing file for next use---#
 finalcheck = os.path.isfile(exefile)

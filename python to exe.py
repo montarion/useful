@@ -1,6 +1,5 @@
 #imports
 import os
-
 from time import sleep
 
 

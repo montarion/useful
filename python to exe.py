@@ -26,7 +26,7 @@ os.chdir(workdir)
 
 
 print("welcome!")
-
+print(os.system("dir"))
 check = os.path.isfile("check.txt")
 print(check)
 print("her i am")
@@ -43,8 +43,6 @@ if check == True:
 
 
 
-ls = os.popen("dir")
-(ls.read())
 
 
 print("initiating phase 2")
@@ -55,21 +53,18 @@ sleep(1)
 
 
 
+print("working..")
+os.system("python pyinstaller.py " + os.path.join(installdir, "python-files", pythonfile))
 
 
-try:
-    step2 = os.popen("python pyinstaller.py " + installdir + "\python-files" + "\\" + pythonfile)
-
-    print("working..")
-
-except:
+'''
     print("please remove the following directory manually:")
     print(" [dist] ")
     print("opening directory in question..")
     sleep(2)
     os.system("explorer.exe /select," + installdir)
 
-
+'''
 
 
 sleep(2)

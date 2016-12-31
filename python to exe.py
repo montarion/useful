@@ -11,8 +11,8 @@ workdir = os.path.join(installdir, pythonfile[:-3])
 exefile = os.path.join(workdir, "dist", pythonfile[:-3], pythonfile[:-3]+".exe" )
 
 os.chdir(installdir)
-ls = os.popen("dir")
-(ls.read())
+#ls = os.popen("dir")
+#(ls.read())
 try:
     os.mkdir(workdir)
 except:
@@ -25,6 +25,10 @@ os.chdir(workdir)
 
 
 print("welcome!")
+print("there are some things that you should do first..")
+print("*add your python file to the 'python")
+#pythonfile = input("what file do you want to make into an exe? ")
+#installdir = input("where is your PyInstaller directory? ")
 print(os.system("dir"))
 check = os.path.isfile("check.txt")
 print(check)

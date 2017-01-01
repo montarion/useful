@@ -7,20 +7,18 @@ import wget
 
 class firstlaunch:
     def __init__(self, url):
-     self.url = url
+        self.url = url
+        self.maindir = os.getcwd()
 
-    def setup(self):
-        global maindir
-        maindir = os.getcwd()
-        if not os.path.exists(os.path.join(os.getcwd(),"input")):
-             os.mkdir(os.path.join(os.getcwd(),"input"))
-        if not os.path.exists(os.path.join(os.getcwd(),"output")):
-             os.mkdir(os.path.join(os.getcwd(),"output"))
-        if not os.path.exists(os.path.join(os.getcwd(),"pyinstaller")):
-             os.mkdir(os.path.join(os.getcwd(),"pyinstaller"))
+        if not os.path.exists(os.path.join(self.maindir,"input")):
+             os.mkdir(os.path.join(self.maindir,"input"))
+        if not os.path.exists(os.path.join(self.maindir,"output")):
+             os.mkdir(os.path.join(self.maindir,"output"))
+        if not os.path.exists(os.path.join(self.maindir,"pyinstaller")):
+             os.mkdir(os.path.join(self.maindir,"pyinstaller"))
 
     def download(self):
-        os.chdir(maindir)
+        os.chdir(self.maindir)
         if os.path.isfile('pyinstaller.zip') != True:
             print('downloading files..')
 

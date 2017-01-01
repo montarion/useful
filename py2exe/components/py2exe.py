@@ -10,12 +10,7 @@ class py2exe:
         #---using this for posthandling---#
         global maindir
         maindir = os.getcwd()
-        os.chdir("..")
-        global cleanup
-        cleanup = os.getcwd()
-        os.chdir(maindir)
-        print(cleanup)
-        print(maindir)
+
 
     def installing(self):
         os.chdir(os.path.join(os.getcwd(), "PyInstaller-3.2"))
@@ -26,9 +21,9 @@ class py2exe:
 
     def posthandling(self):
         #---moving stuff and such---#
-        print("cleaning up..")
-
+        print("moving to output folder..")
         shutil.move(self.filename[:-3], os.path.join(maindir, "output"))
+        print("cleaning up..")
         #using rmdir instead of del to supress prompt#
         os.system("rmdir " + os.path.join(maindir, "output", self.filename[:-3],"build") + " /s /q")
         os.system("del /f " + os.path.join(maindir, "output", self.filename[:-3], self.filename[:-3] + ".spec"))

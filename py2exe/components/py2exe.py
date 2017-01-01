@@ -32,6 +32,6 @@ class py2exe:
         print("remember to create shortcuts, since the exe file has to stay in it's folder!")
         sleep(2)
 
-
         print("opening output file..")
-        os.system("explorer /select, " + os.path.join(os.getcwd(),"output", self.filename[:-3], "dist", self.filename[:-3], self.filename[:-3] + ".exe"))
+        os.system("explorer /select, " + os.path.join(self.maindir,"output", self.filename[:-3], "dist", self.filename[:-3], self.filename[:-3] + ".exe"))
+        print("explorer /select, " + os.path.join(self.maindir,"output", self.filename[:-3], "dist", self.filename[:-3], self.filename[:-3] + ".exe"))

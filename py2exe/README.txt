@@ -8,8 +8,7 @@ full license is available in license.txt
 Py2Exe was written by Montarion.
 
 So, on to the fun stuff!
-Py2Exe makes your python scripts into nice exe files. This means that whoever is using the newly created program doesn't
-have to have python installed on their system.
+Py2Exe makes your python scripts into nice exe files. This means that whoever is using the newly created program doesn't have to have python installed on their system.
 
 ###---INSTRUCTIONS---###
 1. run first setup.py

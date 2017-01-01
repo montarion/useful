@@ -18,6 +18,7 @@ if not os.path.isfile(os.path.join(os.getcwd(), "input", filename)):
     print("please place", filename, "in the input folder and run the program again.")
     sleep(3)
     os.system("explorer " + os.path.join(os.getcwd(), "input"))
+    exit()
 else:
     install = py2exe(filename)
     install.installing()

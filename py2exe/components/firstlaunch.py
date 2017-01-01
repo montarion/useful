@@ -1,9 +1,8 @@
 #imports
 import os
 import shutil
+import urllib.request as wget
 import zipfile
-
-import wget
 
 
 class firstlaunch:
@@ -23,14 +22,15 @@ class firstlaunch:
         if not os.path.exists(os.path.join("tools", "pyinstaller-3.2")):
             print('downloading files..')
 
-            wget.download(self.url, 'pyinstaller.zip')
+            wget.urlretrieve(self.url, 'pyinstaller.zip')
             print("download complete.")
 
         if not os.path.exists(os.path.join("tools", "pyinstaller-3.2")):
             print("preparing files..")
             zip = zipfile.ZipFile('pyinstaller.zip')
             zip.extractall()
-            print("done.")
+            zip.close()
+
 
         if not os.path.exists(os.path.join("tools", "pyinstaller-3.2")):
             print("doing this!")

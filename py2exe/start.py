@@ -7,9 +7,7 @@ from components.py2exe import py2exe
 #---url==link to pyinstaller---#
 url = "https://github.com/pyinstaller/pyinstaller/releases/download/v3.2/PyInstaller-3.2.zip"
 #---req check---#
-filename = "anime-tracker.py"
-
-#filename = input("what is the file that you want to convert?")
+filename = input("what is the file that you want to convert?")
 if not os.path.exists(os.path.join(os.getcwd(), "input")):
     init = firstlaunch(url)
 

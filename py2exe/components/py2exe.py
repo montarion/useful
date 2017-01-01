@@ -13,10 +13,10 @@ class py2exe:
 
 
     def installing(self):
-        os.chdir(os.path.join(os.getcwd(), "PyInstaller-3.2"))
+        os.chdir(os.path.join(os.getcwd(),"tools", "PyInstaller-3.2"))
         print("creating exe file..")
         os.system("python " + "pyinstaller.py " + os.path.join(maindir,"input", self.filename) + " -y")
-        print("hey")
+
         print(self.filename)
 
     def posthandling(self):
@@ -27,5 +27,7 @@ class py2exe:
         #using rmdir instead of del to supress prompt#
         os.system("rmdir " + os.path.join(maindir, "output", self.filename[:-3],"build") + " /s /q")
         os.system("del /f " + os.path.join(maindir, "output", self.filename[:-3], self.filename[:-3] + ".spec"))
+        print("after the first one, i'm here!")
+        print(os.getcwd())
         os.chdir("..")
-
+        os.chdir("..")

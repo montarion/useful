@@ -26,8 +26,8 @@ class py2exe:
         print("cleaning up..")
         #using rmdir instead of del to supress prompt#
         print(self.maindir)
-        os.system("rmdir " + os.path.join(self.maindir, "output", self.filename[:-3],"build") + " /s /q")
-        os.system("del /f " + os.path.join(self.maindir, "output", self.filename[:-3], self.filename[:-3] + ".spec"))
+        shutil.rmtree(os.path.join(self.maindir, "output", self.filename[:-3],"build"))
+        os.remove(os.path.join(self.maindir, "output", self.filename[:-3], self.filename[:-3] + ".spec"))
         print("conversion complete!")
         print("remember to create shortcuts, since the exe file has to stay in it's folder!")
         sleep(2)

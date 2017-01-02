@@ -36,6 +36,6 @@ class firstlaunch:
             shutil.move(os.path.join(self.maindir, "pyinstaller-3.2"), os.path.join(self.maindir, "tools"))
 
         if os.path.isfile("pyinstaller.zip") == True:
-            os.system("del pyinstaller.zip")
+            os.remove("pyinstaller.zip")
 
 

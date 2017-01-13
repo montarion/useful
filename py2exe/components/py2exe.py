@@ -15,7 +15,7 @@ class py2exe:
     def installing(self):
         os.chdir(os.path.join(os.getcwd(),"tools", "PyInstaller-3.2"))
         print("converting " + self.filename + " to exe..")
-        os.system("python " + "pyinstaller.py " + os.path.join(self.maindir,"input", self.filename) + " -y")
+        os.system("python " + "pyinstaller.py " + "--noconsole --onefile " + os.path.join(self.maindir,"input", self.filename) + " -y")
 
 
 

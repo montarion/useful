@@ -257,9 +257,8 @@ def tracker():
                                         print("please reply with either 'yes' or 'choose' if you want to choose your episode, or with 'no' or 'latest' if you want to watch the latest episode")
 
                                 quit()
-                            if option == 'n' or option == 'no':
+                            if option == 'n' or option == 'no' or option == 'back':
                                 print('Alright, Bye!')
-                            if option == 'back':
                                 tracker()
                             else:
                                 print("Please reply with either 'y', 'n', or 'back'")

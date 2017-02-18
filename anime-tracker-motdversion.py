@@ -1,6 +1,7 @@
 import json
 
 import requests
+print("shows that aired recently:\n")
 def search():
     #---url for releases, in JSON---#
     url = 'http://www.masterani.me/api/releases'

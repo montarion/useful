@@ -1,7 +1,7 @@
 import json
 
 import requests
-print("shows that aired recently:\n")
+#print("shows that aired recently:\n")
 def search():
     #---url for releases, in JSON---#
     url = 'http://www.masterani.me/api/releases'
@@ -17,9 +17,25 @@ def search():
     anime3 = string[3]['anime']['title']
     anime4 = string[4]['anime']['title']
 
-    print(anime0)
-    print(anime1)
-    print(anime2)
-    print(anime3)
-    print(anime4)
+    try:
+	 print(anime0)
+    except:
+	pass
+    try:
+	print(anime1)
+    except: 
+	pass
+    try:
+        print(anime2)
+    except:
+        pass
+    try:
+        print(anime3)
+    except:
+        pass
+    try:
+        print(anime4)
+    except:
+        pass
+
 search()

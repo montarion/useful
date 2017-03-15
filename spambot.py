@@ -5,9 +5,9 @@ msg = input("what message do you want to send?")
 counter = input("how often do you want to send your message")
 
 while i < int(counter):
-    fromaddr = 'user@gmail.com'
+    fromaddr = 'username@gmail.com'
 
-    username = 'user@gmail.com'
+    username = 'username@gmail.com'
     password = 'password'
     server = smtplib.SMTP('smtp.gmail.com:587')
     server.ehlo()

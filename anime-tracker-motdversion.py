@@ -18,24 +18,30 @@ def search():
     anime4 = string[4]['anime']['title']
 
     try:
-	 print(anime0)
+        print(anime0)
     except:
-	pass
+        print("failure to get show 1")
+        pass
     try:
-	print(anime1)
-    except: 
-	pass
+        print(anime1)
+    except:
+        print("failure to get show 2")
+        pass
     try:
         print(anime2)
     except:
+        print("failure to get show 3")
         pass
     try:
         print(anime3)
     except:
+        print("failure to get show 4")
         pass
     try:
         print(anime4)
     except:
+        print("failure to get show 5")
         pass
 
 search()
+

@@ -5,4 +5,4 @@
 
 #------------------#
 
-This program was written by Jamiro Grantsaan.
+This program was written by Montarion

@@ -3,7 +3,6 @@
 import json
 import os
 import webbrowser
-import winsound
 from time import sleep
 
 import requests
@@ -30,6 +29,7 @@ def search():
     test1 = test.text
     test = str(test1)
     string = json.loads(str(test))
+
     anime0 = string[0]['anime']['title']
     anime1 = string[1]['anime']['title']
     anime2 = string[2]['anime']['title']
@@ -57,7 +57,7 @@ def search():
         option = input('Do you want to watch it? ')
 
         if option == 'y' or 'yes':
-            webbrowser.get("C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s").open(animeurl)
+            webbrowser.open(animeurl,2)
         elif option == 'n':
             print('Alright, bye!')
 
@@ -68,7 +68,7 @@ def search():
         option = input('Do you want to watch it? ')
 
         if option == 'y' or 'yes':
-            webbrowser.get("C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s").open(animeurl)
+            webbrowser.open(animeurl,2)
         elif option == 'n':
             print('Alright, bye!')
 
@@ -81,7 +81,7 @@ def search():
 
 
         if option == 'y' or 'yes':
-            webbrowser.get("C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s").open(animeurl)
+            webbrowser.open(animeurl,2)
         elif option == 'n':
             print('Alright, bye!')
 
@@ -92,7 +92,7 @@ def search():
         option = input('Do you want to watch it? ')
 
         if option == 'y' or 'yes':
-            webbrowser.get("C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s").open(animeurl)
+            webbrowser.open(animeurl,2)
         elif option == 'n':
             print('Alright, bye!')
 
@@ -104,23 +104,18 @@ def search():
         option = input('Do you want to watch it? ')
 
         if option == 'y' or 'yes':
-            webbrowser.get("C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s").open(animeurl)
+            webbrowser.open(animeurl,2)
         elif option == 'n':
             print('Alright, bye!')
     elif search4 == False:
         print('The term ' + '"' + searchq + '"' + " didn't give any results")
 
 
-'''def episode():
-        episode = input("what episode do you want to watch? \n(Warning! I can't guarrantee that the episode will be available.) ")
-        updater()
-        episodeurl = 'http://www.masterani.me/anime/watch/' + string[0]['anime']['slug'] + '/' + episode
-        webbrowser.get("C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s").open(episodeurl)
-'''
-def alert():
 
+def alert():
+    pass
     # Play Windows exit sound.
-    winsound.PlaySound("SystemExclamation", winsound.SND_ALIAS)
+    #winsound.PlaySound("SystemExclamation", winsound.SND_ALIAS)
 
 
 
@@ -284,3 +279,4 @@ def tracker():
                     quit()
 
 tracker()
+

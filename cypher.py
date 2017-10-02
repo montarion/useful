@@ -1,10 +1,10 @@
 import string
-from time import sleep
+
 
 import random
 test = string.ascii_lowercase + string.digits
 ###this is sorta needed I guess###
-extra = ' ' + '!' + '?' + ',' + '.'
+extra = ' ' + '!' + '?' + ',' + '.' + '-' + '<' + '>'
 letters = string.ascii_lowercase + extra
 ###/###
 
@@ -27,6 +27,7 @@ def randgen(seeed):
             i = i + 1
 
     return final
+
 seeed = input('choose seed')
 
 randgen(seeed)
@@ -36,9 +37,6 @@ def encoder(sentence):
     print('encoding...')
     i = 0
     x = 0
-
-
-
 
     notalist = []
 
@@ -58,16 +56,15 @@ def encoder(sentence):
         joinedsentence = ''.join(notalist)
         x += 1
     print("your encoded sentence is: " + joinedsentence)
+
+
 def decoder(code):
     print('decoding...')
     i = 0
     x = 0
     notalist = []
 
-
-
     letters = string.ascii_lowercase + extra
-
 
     global decoding
     decoding = {}
@@ -91,9 +88,6 @@ def decoder(code):
     print("your decoded sentence is: " + joinedsentence)
 
 
-
-
-
 def menu():
     while True:
         option = input('What do you want to do? ')
@@ -104,7 +98,6 @@ def menu():
         elif option.lower() in ('decode', 'decrypt', '2'):
             code = input('What is your code? ').lower()
             decoder(code)
-
         elif option.lower() in ('leave', 'exit', '3'):
             print('Bye!')
             quit()

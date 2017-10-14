@@ -5,7 +5,7 @@ import string
 import random
 test = string.ascii_lowercase + string.digits
 ###this is sorta needed I guess###
-extra = ' ' + '!' + '?' + ',' + '.' + "'" + '-' + '<' + '>'
+extra = ' ' + '!' + '?' + ',' + '.' + '-' + '<' + '>' + '=' + "'"		# added equal sign 
 letters = string.ascii_lowercase + extra
 ###/###
 

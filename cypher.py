@@ -4,7 +4,7 @@ import string
 import random
 test = string.ascii_lowercase + string.digits
 ###this is sorta needed I guess###
-extra = ' ' + '!' + '?' + ',' + '.' + '-' + '<' + '>'
+extra = ' ' + '!' + '?' + ',' + '.' + "'" + '-' + '<' + '>'
 letters = string.ascii_lowercase + extra
 ###/###
 

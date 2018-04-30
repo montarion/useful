@@ -2,6 +2,13 @@ import socket
 import wget
 import os
 
+###Colours
+OKGREEN = '\033[92m'
+OKBLUE = '\033[94m'
+WARNING = '\033[93m'
+RED = '\033[91m'
+ENDC = '\033[0m'
+
 if os.path.exists('tld.txt'):
     pass
 else:
@@ -43,16 +50,17 @@ error = '***'
 failure = []
 succes = []
 while i < 285:
-
+    percentage = round(i / 285 * 100, 2)
+    print(WARNING + "at" + ' ' + str(percentage) + "%" + ENDC, end='\r')
     host = url + flist[i]
     try:
         result = socket.gethostbyname(host)
-        print(host + " has ip: " + result)
+        #print(OKGREEN + host + " has ip: " + result + ENDC)
         succes.append(host)
     except:
-        print("looking up: " + host + ' resulted in failure')
+        print(RED + host + ' is taken.' + ENDC)
         failure.append(host)
     i += 1
     x += 1
-print("these are taken: " + str(succes))
+#print("these are taken: " + str(succes))
 

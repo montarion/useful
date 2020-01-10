@@ -21,6 +21,6 @@ def sendmail(toaddrs, counter):
         print("sent mail number {} to address: {}".format(i, toaddrs))
     server.quit()
 
-t1 = threading.Thread(target=sendmail, args=(toaddrs[0], counter)).start()
-t2 = threading.Thread(target=sendmail, args=(toaddrs[1], counter)).start()
-t3 = threading.Thread(target=sendmail, args=(toaddrs[2], counter)).start()
+for i in len(msg):
+    threading.Thread(target=sendmail, args=(toaddrs[i], counter)).start()
+

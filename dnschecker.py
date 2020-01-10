@@ -57,12 +57,14 @@ while i < 285:
     try:
         result = socket.gethostbyname(host)
         print(RED + host + " has ip: " + result + ENDC)
-        succes.append(host)
+        failure.append(host)
     except:
         print(OKGREEN + host + ' is free.' + ENDC)
-        failure.append(host)
+        succes.append(host)
     i += 1
     x += 1
-for site in succes:
-    print("these are taken: " + str(site))
+for site in failure:
+    print("{} {} is taken. {}".format(RED, site, ENDC))
 
+for site in succes:
+    print("{} {} is free. {}".format(OKGREEN, site, ENDC))
